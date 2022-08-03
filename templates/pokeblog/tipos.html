@@ -1,0 +1,103 @@
+{% extends 'pokedex/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    {% for unidad in review  %}
+    
+    <section class="page-section clearfix">
+        <div class="container">
+          <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" img src="{{unidad.imagen.url}}" alt="" style="width: 50%;">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+              <h2 class="section-heading mb-4" >
+                <span class="section-heading-upper"></span>
+                <span class="section-heading-lower">{{unidad.titulo}}</span>
+              </h2>
+              <p class="mb-3">{{unidad.contenido}}
+              </p>
+              <div style= "text-align: left; font-size: 0.8em;">
+                
+                Autor: {{unidad.autor}}
+
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+
+
+
+
+
+
+    
+       
+    
+    
+    
+    {% endfor %}
+
+      <section>
+
+        <div style="width: 75% ;margin: auto; text-align: center; color: white ;"   >
+
+            Tipos: 
+
+            {% for unidad in review %}
+
+              {% for unidad_interna in unidad.tipos.all %}
+
+
+
+
+
+
+              {{unidad_interna.tipos}}
+
+
+
+                
+                
+                
+              {% endfor %}
+                
+                
+                
+                
+            {% endfor %}
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
