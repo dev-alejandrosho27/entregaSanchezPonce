@@ -47,3 +47,5 @@ class Pokemons(models.Model):
         verbose_name="pokemon"
         verbose_name_plural="pokemons"
 
+    def __str__(self):
+        return self.nombre

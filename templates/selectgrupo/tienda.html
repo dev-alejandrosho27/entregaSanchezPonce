@@ -5,21 +5,29 @@
 
 
 <div class="container">
-<div class="row">
+    <div class="row">
 
 
 {% for unidad in poke_lista %}
-<div class="col-md-3">
-<div class="card" style="width: 100%;margin: 5px 5px;">
-    <img src="{{unidad.imagen.url}}" class="card-img-top" >
-    <div class="card-body" style="text-align: left;">
+    <div class="col-md-3">
+        <div class="card" style="width: 100%;margin: 5px 5px;">
+            <img src="{{unidad.imagen.url}}" class="card-img-top" >
+            <div class="card-body" style="text-align: left;">
 
-        <h4 class="card-title" style="text-align: center;">{{unidad.nombre}}</h4>
-        <p class="card-text">{{unidad.descripcion}}</p>
-        <p class="card-text">estadisticas: {{unidad.estadisticas}}</p>
-        <p class="card-text">tipo:{{unidad.tipo}}</p>
-        <p class="card-text">{{unidad.peso}}kg</p>
+                <h4 class="card-title" style="text-align: center;">{{unidad.nombre}}</h4>
+                <p class="card-text">{{unidad.descripcion}}</p>
+                <p class="card-text">estadisticas: {{unidad.estadisticas}}</p>
+                <p class="card-text">tipo:{{unidad.tipo}}</p>
+                <p class="card-text">{{unidad.peso}}kg</p>
 
+
+
+            </div>
+
+
+
+
+        </div>
 
 
     </div>
@@ -27,55 +35,12 @@
 
 
 
-</div>
 
 
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-{% comment %} <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" img src="{{unidad.imagen.url}}" alt="" style="width: 50%;">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-upper"></span>
-            <span class="section-heading-lower">{{unidad.nombre}}</span>
-          </h2>
-          <p class="mb-3">{{unidad.descripcion}}
-          </p>
-          <div style= "text-align: left; font-size: 0.8em;">
-           <p> tipo:{{unidad.tipo}}</p>
-           <p>estadisticas: {{unidad.estadisticas.atk}}atk &nbsp; {{unidad.estadisticas.defen}}def &nbsp; {{unidad.estadisticas.spp}}spp &nbsp;</p>
-            <p>peso:{{unidad.peso}}kg</p>
-        
-        
-        </div>
-         
-        </div>
-      </div>
-    </div>
-  </section> {% endcomment %}
 
 
 
 {% endfor %}
-</div>
+    </div>
 </div>
 {% endblock %}
