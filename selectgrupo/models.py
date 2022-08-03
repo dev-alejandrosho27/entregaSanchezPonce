@@ -39,6 +39,7 @@ class Pokemons(models.Model):
     evolucion=models.BooleanField(default=True)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now_add=True)
+    valor_unitario=models.IntegerField()
     
     
     

@@ -4,9 +4,52 @@
 
 
 
+<div class="container">
+<div class="row">
+
+
 {% for unidad in poke_lista %}
+<div class="col-md-3">
+<div class="card" style="width: 100%;margin: 5px 5px;">
+    <img src="{{unidad.imagen.url}}" class="card-img-top" >
+    <div class="card-body" style="text-align: left;">
+
+        <h4 class="card-title" style="text-align: center;">{{unidad.nombre}}</h4>
+        <p class="card-text">{{unidad.descripcion}}</p>
+        <p class="card-text">estadisticas: {{unidad.estadisticas}}</p>
+        <p class="card-text">tipo:{{unidad.tipo}}</p>
+        <p class="card-text">{{unidad.peso}}kg</p>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-<section class="page-section clearfix">
+{% comment %} <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" img src="{{unidad.imagen.url}}" alt="" style="width: 50%;">
@@ -28,10 +71,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
 
 
 
 {% endfor %}
-
+</div>
+</div>
 {% endblock %}
