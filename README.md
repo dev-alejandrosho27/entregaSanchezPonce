@@ -21,6 +21,9 @@ el unico sector que no funciona es la parte de la seleccion del equipo ya que si
 
 cada app tiene una configuracion en la seccion de admin para poder realizar cambios y agregar item a los modelos directamente desde la pagina o directamente desde el shell en el vscode
 
+uno de los errores que no supe solucionar es que al entrar en la direccion ip que se muestra desde la consola hay ciertas imagenes que no cambian pero si se entra desde localhost si se ven las imagenes que cambie 
+en el requirements estan las extensiones que deben descargarse para que todo funcione correctamente
+
 
 
 espero lo que he hecho sea suficiente para aprobar 
