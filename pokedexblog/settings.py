@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     "infoentrenador",
     "selectgrupo",
     "grupo",
+    "autenticacion",
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },

@@ -20,6 +20,9 @@ from pokedex import views
 from pokeblog import views
 from pokedexserv import views
 from infoentrenador import views
+from grupo import views
+from autenticacion import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",include("pokedex.urls")),
@@ -27,6 +30,8 @@ urlpatterns = [
     path("pokeblog/",include("pokeblog.urls")),
     path("infoentrenador/", include("infoentrenador.urls")),
     path("tienda/",include("selectgrupo.urls")),
+    path("grupo/",include("grupo.urls")),
+    path("autenticacion/",include("autenticacion.urls")),
    
     
 ]

@@ -1,8 +1,12 @@
+from django.contrib import sessions
+
+
+
 class Grupo:
     def __init__(self, request):
         self.request=request
         self.session=request.session
-        carro=self.session.get("grupo")
+        grupo=self.session.get("grupo")
         
         if not grupo:
             grupo=self.session["grupo"]={}

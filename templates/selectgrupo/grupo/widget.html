@@ -1,0 +1,109 @@
+<table class="table table-bordered" style="color: white;">
+
+    <thead>
+        <tr>
+
+
+
+            <th colspan= "3"   class="text-center">
+
+
+
+                seleccion de equipo
+
+
+
+
+            </th>
+
+            <tr>
+
+
+
+                <th>Pokemon</th>
+                <th>tipo</th>
+                <th>peso</th>
+
+
+
+            </tr>
+
+
+
+
+
+
+        </tr>
+        <tbody>
+            {% if request.session.grupo.items %}
+                {% for key, value in request.session.grupo.items %}
+                    <tr class="text-center">
+                        <td>{{value.nombre}}</td>
+                        <td>{{value.tipo}}</td>
+                        <td>
+                           {% comment %}  <a href="{% url 'grupo:agregar/' pokemon_id %}" class="btn btn-sm btn-success">+</a>
+                            <a href="{% url 'grupo:restar/' pokemon_id %}" class="btn btn-sm btn-success">-</a>
+
+ {% endcomment %}
+                        </td>
+
+
+                    </tr>
+                
+                
+                
+                
+                
+                
+                
+                
+                {% endfor %}
+            {% else %}
+                <tr>
+
+
+                    <td colspan="3">
+                        <div class="alert alert-danger text-center" >
+
+
+                            Tu equipo esta vacio
+
+
+
+                        </div>
+
+
+                    </td>
+
+
+
+
+                </tr>
+            
+            
+            
+            {% endif %}
+
+
+
+
+
+
+
+
+
+
+        </tbody>
+
+
+
+
+
+    </thead>
+
+
+
+
+
+
+</table>
